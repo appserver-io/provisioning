@@ -65,7 +65,7 @@ class StandardProvisioner extends AbstractProvisioner
         // check if the webapps directory exists
         if (is_dir($webappPath = $application->getWebappPath())) {
             // prepare the glob expression with the application's directories to parse
-            $applicationDirectories = $application->getEnvironmentAwareGlobPattern($webappPath, '{WEB-INF,META-INF}/provision', GLOB_BRACE);
+            $applicationDirectories = $application->getEnvironmentAwareGlobPattern('{WEB-INF,META-INF}/provision', GLOB_BRACE);
 
             // reset the annotation registry
             AnnotationRegistry::reset();
